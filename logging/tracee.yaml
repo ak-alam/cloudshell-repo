@@ -33,13 +33,13 @@ spec:
         - name: etc-os-release
           mountPath: /etc/os-release-host
           readOnly: true
-        resources:
-          limits:
-            cpu: 500m
-            memory: 300Mi
-          requests:
-            cpu: 350m
-            memory: 50Mi
+        # resources:
+        #   limits:
+        #     cpu: 500m
+        #     memory: 300Mi
+        #   requests:
+        #     cpu: 350m
+        #     memory: 50Mi
       tolerations:
         - effect: NoSchedule
           operator: Exists
