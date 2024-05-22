@@ -19,3 +19,6 @@ Add default prometheus datasource and addtional data source loki
 ## Install promtail logging agent
 
 helm upgrade --install promtail grafana/promtail --values promtail-values.yaml -n monitoring
+
+## Install loki 
+helm upgrade --install loki grafana/loki-distributed -n monitoring
