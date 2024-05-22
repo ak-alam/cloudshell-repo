@@ -12,4 +12,10 @@ helm repo add grafana https://grafana.github.io/helm-charts
 kubectl create ns monitoring 
 
 ## install kube-prometheus-stack
-helm upgrade --install prom-stack prometheus-community/kube-prometheus-stack -n monitoring --values prometheus-config.yaml
+helm upgrade --install prom-stack prometheus-community/kube-prometheus-stack --values prometheus-config.yaml -n monitoring
+
+Add default prometheus datasource and addtional data source loki
+
+## Install promtail logging agent
+
+helm upgrade --install promtail grafana/promtail --values promtail-values.yaml -n monitoring
